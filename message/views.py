@@ -41,19 +41,6 @@ class GetAllMessagesView(ListAPIView):
     pagination_class = Pagination
 
 
-# class CreateMessageView2(APIView):
-#     serializer_class = MessageSerializer
-#
-#     def post(self, request):
-#         message = request.data.get('message')
-#
-#         serializer = self.serializer_class(data=message)
-#         if serializer.is_valid():
-#             # message_saved = serializer.save()
-#             serializer.create(self.serializer_class(data=message))
-#         return Response({"success": "created successfully"})
-
-
 class CreateMessageView(CreateAPIView):
     """
     create new message

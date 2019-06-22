@@ -6,6 +6,6 @@ from message.views import GetAllMessagesView, GetSingleMessageView, CreateMessag
 urlpatterns = [
     url(r'^api/(?P<message_id>[\d]+)$', GetSingleMessageView.as_view()),
     url(r'^messages/page/$', GetAllMessagesView.as_view()),
-    url(r'^message/create$', CreateMessageView.as_view()),
+    url(r'^message/create$', CreateMessageView.as_view(), name='create_msg'),
 ]
 
