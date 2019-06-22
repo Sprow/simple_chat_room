@@ -9,3 +9,9 @@ class MessageSerializer(serializers.ModelSerializer):
         model = Message
         fields = '__all__'
 
+
+class MessageCreateSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Message
+        fields = ('email', 'message_text', 'create_date')
